@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'NanumSquare', sans-serif !important;
+    background-color: black;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*헤더, 내비게이션*/
+header > #gnb > .logo {
+    width: 250px;
+    padding: 30px;
+}
+header > #gnb > #menu {
+    float: right;
+}
+header > #gnb > #menu li {
+    float: left;
+    margin: 60px 80px 70px 60px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*콘텐츠*/
+content {
+    text-align: center;
+}
+
+/*어사이드*/
+aside {
+    float: right;
+}
+
+/*푸터*/
+footer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    text-align: center;
+} /*푸터 하단에 고정시키기*/
