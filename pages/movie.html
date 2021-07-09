@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie MBTI : MOVIE</title>
+    <link rel="stylesheet" href="../library/fontawsome/css/all.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/movie.css">
+</head>
+<body>
+    <header>
+        <nav id="gnb">
+            <a href="http://127.0.0.1:5500/index.html">
+                <img src="../img/logo.png" id="logo" alt="로고">
+            </a>
+            <a href="#" id="toggle">
+                <i id= "icon" class="fas fa-bars"></i>
+            </a>
+            <ul id="menu">
+                <li><a href="http://127.0.0.1:5500/pages/about.html">ABOUT</a></li>
+                <li><a href="http://127.0.0.1:5500/pages/movie.html">MOVIE</a></li>
+                <li><a href="#">WISH</a></li>
+                <li><a href="#">SEARCH</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <content>
+        <div id="choose_mbti">
+            <span>내 MBTI는?</span>
+            <select>
+                <option selected>ENFP</option>
+                <option>ENTP</option>
+                <option>ESTP</option>
+                <option>ESFP</option>
+                <option>ESTJ</option>
+                <option>ESFJ</option>
+                <option>ENFJ</option>
+                <option>ENTJ</option>
+                <option>ISTJ</option>
+                <option>ISFJ</option>
+                <option>INFJ</option>
+                <option>INTJ</option>
+                <option>ISTP</option>
+                <option>ISFP</option>
+                <option>INFP</option>
+                <option>INTP</option>
+            </select>
+        </div>
+        <div id="choose_genre">
+            <button>드라마</button>
+            <button>범죄</button>
+            <button>코미디</button>
+            <button>로맨스</button>
+            <button>애니</button>
+            <button>다큐</button>
+            <button>공포</button>
+            <button>뮤지컬</button>
+            <button>액션</button>
+            <button>스릴러</button>
+            <button>판타지</button>
+            <button>SF</button>
+        </div>
+        <div id="result">
+            <img src="https://via.placeholder.com/200x300">
+            <img src="https://via.placeholder.com/200x300">
+            <img src="https://via.placeholder.com/200x300">
+            <img src="https://via.placeholder.com/200x300">
+        </div>
+        <div id="info_box">
+            <p id="m_title">뷰티인사이드</p>
+            <button id="wish">ADD WISH</button>
+            <p id="m_info">2015.08.20 개봉 / 판타지, 로맨스 / 2시간 7분 / 백종열 감독</p>
+            <p id="m_plot">남자, 여자, 아이, 노인.. 심지어 외국인까지! 자고 일어나면 매일 다른 모습으로 변하는 남자, ‘우진’. 그에게 처음으로 비밀을 말하고 싶은 단 한 사람이 생겼다. 드디어 D-DAY! ‘우진’은 그녀에게 자신의 마음을 고백하기로 하는데… “초밥이 좋아요? 스테이크가 좋아요? 사실.. 연습 엄청 많이 했어요. 오늘 꼭 그쪽이랑 밥 먹고 싶어서…”</p>
+        </div>
+    </content>
+
+    <script src="../library/jquery-3.6.0.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/movie.js"></script>
+</body>
+</html>

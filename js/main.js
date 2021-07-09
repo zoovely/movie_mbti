@@ -8,22 +8,3 @@ $("document").ready(function() {
     };
     $("#bg").tubular(options);
 });
-
-$("#toggle").on("click", function() {
-    $("#menu").toggleClass("visible");
-    $("content").toggleClass("hidden");
-    $("aside").toggleClass("hidden");
-});
-
-$(window).resize(function() {
-    var windowSize = $(window).width();
-    if(windowSize > 1260) {
-        $("content").removeClass("hidden");
-        $("aside").removeClass("hidden");
-    }
-    else if((windowSize <= 1260) && ($("#menu").hasClass("visible"))) {
-        $("content").addClass("hidden");
-        $("aside").addClass("hidden");
-    }
-});
-

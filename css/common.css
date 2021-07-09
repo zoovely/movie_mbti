@@ -16,6 +16,9 @@ body, html {
 }
 
 /*헤더, 내비게이션*/
+header > #gnb {
+    position: relative;
+}
 header > #gnb > a > #logo {
     width: 250px;
     padding: 30px;
@@ -36,16 +39,23 @@ header > #gnb > a > #icon {
 /*메뉴 이름들이 영역을 넘어버리므로 햄버거 메뉴로 변경하는 분기점*/
 @media screen and (max-width: 1260px) {
     header > #gnb > #menu {
+        position: absolute;
+        right: 0;
         float: none;
-        text-align: center;
+        width: 35%;
+        text-align: right;
         background-color: black;
-        padding: 30px;
-        visibility: hidden;
+        padding: 20px;
+        transform: translateX(100%);
+        z-index: 100;
+        border-radius: 100px 0 0 100px;
+        border: 1px solid white;
+        border-right: none;
     }
     header > #gnb > #menu li {
         float: none;
         margin: 0;
-        padding: 20px;
+        padding: 30px 10px 30px 0;
     }
     header > #gnb > a > #icon {
         display: block;
@@ -53,16 +63,23 @@ header > #gnb > a > #icon {
         margin: 50px 50px;
         font-size: 4em;
     }
+    body {
+        overflow-x: hidden;
+    } /*스크롤 생김 방지*/
 }
 
 /*로고와 햄버거 메뉴 아이콘이 겹치는 분기점*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     header > #gnb > a > #logo {
         width: 150px;
     }
     header > #gnb > a > #icon {
         font-size: 3em;
         margin: 40px;
+    }
+    header > #gnb > #menu li {
+        font-size: 30px;
+        padding: 20px 0 20px 0;
     }
 }
 
@@ -76,14 +93,37 @@ header > #gnb > a > #icon {
         margin: 35px;
     }
     header > #gnb > #menu li {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
 /* 쿼리용 클래스*/
-.hidden {
-    visibility: hidden;
+.fadein {
+    transform: translateX(0) !important;
+    animation: fade-in 1s;
 }
-.visible {
-    visibility: visible !important;
+.fadeout {
+    transform: translateX(100%);
+    animation: fade-out 1s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translateX(5px);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
 }

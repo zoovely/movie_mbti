@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/*헤더 선택 탭 색상 변경*/
+header > #gnb > #menu > li:first-child > a {
+    color: black;
+    background-color: white;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+/*콘텐츠 제목*/
+content {
+    position: absolute;
+    top: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+content > #title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+content > #title > h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+content > #title > h3 {
+    font-size: 40px;
+    font-weight: normal;
+}
+content > #title > h3 > u {
+    text-decoration: underline;
+}
+
+/*콘텐츠 내용*/
+content > #bottom {
+    display: flex;
+    justify-content: center;
+}
+content > #bottom > #text {
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: left;
+    margin: 50px 30px 0 0;
+}
+content > #bottom > #text > p {
+    margin-bottom: 7px;
+}
+content > #bottom > #first {
+    display: none;
+}
+content > #bottom > #second {
+    width: 400px;
+    height: 320px;
+}
+content > #bottom > span {
+    font-size: 80px;
+    margin: 100px 0 0 30px;
+}
+
+/*푸터*/
+
+#share {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    background-color: black;
+}
+#share > a {
+    display: flex;
+    justify-content: center;
+}
+#share > a > img {
+    width: 50px;
+    margin-right: 10px;
+}
+#share > a > span {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    content {
+        top: 30%;
+    }
+    content > #title > h1 {
+        font-size: 70px;
+    }
+    content > #title > h3 {
+        font-size: 30px;
+    }
+    content > #bottom > #text {
+        font-size: 20px;
+    }
+    content > #bottom > #second {
+        width: 300px;
+        height: 250px;
+    }
+    content > #bottom > span {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 900px) {
+    content {
+        top: 30%;
+    }
+    content > #title > h1 {
+        font-size: 60px;
+    }
+    content > #title > h3 {
+        font-size: 20px;
+    }
+    content > #bottom > #text {
+        font-size: 18px;
+        margin: 30px 10px 0 0;
+    }
+    content > #bottom > #second {
+        width: 200px;
+        height: 180px;
+        margin-top: 15px;
+    }
+    content > #bottom > span {
+        font-size: 40px;
+        margin: 70px 0 0 20px;
+    }
+    #share > a > img {
+        width: 30px;
+        margin-right: 10px;
+    }
+    #share > a > span {
+        font-size: 18px;
+        margin-top: 7px;
+    }
+}
+@media screen and (max-width: 600px) {
+    content {
+        top: 20%;
+        padding: 10px;
+    }
+    content > #title > h1 {
+        font-size: 40px;
+    }
+    content > #title > h3 {
+        font-size: 18px;
+    }
+    content > #bottom {
+        display: block;
+        text-align: center;
+    }
+    content > #bottom > #text {
+        text-align: center;
+    }
+    content > #bottom > #first {
+        display: inline-block;
+        width: 250px;
+    }
+    content > #bottom > #second {
+        display: none;
+    }
+    content > #bottom > span {
+        display: none;
+    }
+}
+@media screen and (max-width: 360px) {
+    content {
+        top: 20%;
+    }
+    content > #title > h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    content > #bottom > #first {
+        display: none;
+    }
+}
