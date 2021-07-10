@@ -63,7 +63,8 @@ content > #bottom > span {
 #share {
     width: 100%;
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
+    padding: 10px;
     background-color: black;
 }
 #share > a {
