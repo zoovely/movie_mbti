@@ -59,11 +59,11 @@ content > #bottom > span {
 }
 
 /*푸터*/
-
 #share {
     width: 100%;
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
+    padding: 10px 0 10px 0;
     background-color: black;
 }
 #share > a {

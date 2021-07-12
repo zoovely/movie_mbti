@@ -37,7 +37,7 @@ header > #gnb > a > #icon {
 }
 
 /*메뉴 이름들이 영역을 넘어버리므로 햄버거 메뉴로 변경하는 분기점*/
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1277px) {
     header > #gnb > #menu {
         position: absolute;
         right: 0;
