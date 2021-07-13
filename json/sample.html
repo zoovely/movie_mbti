@@ -8,15 +8,17 @@
 </head>
 <body>
     <div></div>
-    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="../library/jquery-3.6.0.min.js"></script>
     <script>
         $(function() {
             $.ajax({
                 url:"./sample.json",
                 dataType:"json",
                 success: function(data) {
-                    $("div").text(data.name);
-                    $("div").append("<img src='"+data.poster+"'>");
+                    for(i in data) {
+                        $("div").append(data[i].name);
+                        $("div").append("<img src='"+data[i].poster+"'>");
+                    }
                 }
             });
         });

@@ -1,5 +1,42 @@
-//figure 선택시
-$("figure").on("click", function() {
+//영화 불러오기
+var m_data;
+$.ajax({
+    url:"../json/movie.json",
+    dataType:"json",
+    success: function(data) {
+        m_data = data;
+        for(i in m_data) { //초기 mbti = enfp
+            if(m_data[i].mbti == $("#mbti_select option:checked").text()) {
+                var figure = "<figure><img src='";
+                figure += m_data[i].poster;
+                figure += "'><p>";
+                figure += m_data[i].name;
+                figure += "</p></figure>";
+                $("#result").append(figure);
+            }
+        }
+    }
+});
+
+//mbti 선택시
+$("#mbti_select").on("change", function() {
+    $("figure").remove();
+    for(i in m_data) {
+        if(m_data[i].mbti == $("#mbti_select option:checked").text()) {
+            var figure = "<figure><img src='";
+            figure += m_data[i].poster;
+            figure += "'><p>";
+            figure += m_data[i].name;
+            figure += "</p></figure>";
+            $("#result").append(figure);
+        }
+    }
+
+    $("button").removeClass("checked");
+});
+
+//figure 선택시 (ajax로 불러온 요소에 적용하기 위해 document사용)
+$(document).on("click", "figure", function() {
     //info_box 위치 초기화 (인덱스 번호에 포함되지 않게)
     $("#wrap").insertAfter("figure:last-child");
     var indexNum = $(this).index();
@@ -44,6 +81,15 @@ $("figure").on("click", function() {
         $("#wrap").insertAfter($(this));
     }
 
+    //info_box 내용 변경
+    for(i in m_data) {
+        if(m_data[i].name==$(this).children('p').text()) {
+            $("#m_title").text(m_data[i].name);
+            $("#m_info").text(m_data[i].info);
+            $("#m_plot").text(m_data[i].story);
+        }
+    }
+
     //info_box 출력 (다른 figure 눌러도 계속 출력중)
     if($("figure img").hasClass("choose_poster")) {
         $("#info_box").addClass("slide");
@@ -71,10 +117,35 @@ $("figure").on("click", function() {
 
 //버튼 선택시 css 변경
 $("button").on("click", function() {
-    $(this).addClass("checked");
+    $(this).toggleClass("checked");
     if($("button").not($(this)).hasClass("checked")) {
         $("button").not($(this)).removeClass("checked");
     }
+
+    $("figure").remove();
+    for(i in m_data) {
+        if((m_data[i].mbti == $("#mbti_select option:checked").text()) && (m_data[i].genre == $(this).attr("id"))) {
+            var figure = "<figure><img src='";
+            figure += m_data[i].poster;
+            figure += "'><p>";
+            figure += m_data[i].name;
+            figure += "</p></figure>";
+            $("#result").append(figure);
+        }
+    }
+
+    if(!($(this).hasClass("checked"))) {
+        $("figure").remove();
+        for(i in m_data) {
+            if(m_data[i].mbti == $("#mbti_select option:checked").text()) {
+                var figure = "<figure><img src='";
+                figure += m_data[i].poster;
+                figure += "'><p>";
+                figure += m_data[i].name;
+                figure += "</p></figure>";
+                $("#result").append(figure);
+            }
+        }
+    }
 });
 
-//info_box 위치 선정
