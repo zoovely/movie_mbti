@@ -7,7 +7,7 @@ $.ajax({
         m_data = data;
         for(i in m_data) { //초기 mbti = enfp
             if(m_data[i].mbti == $("#mbti_select option:checked").text()) {
-                var figure = "<figure><img src='";
+                var figure = "<figure><img alt='포스터' src='";
                 figure += m_data[i].poster;
                 figure += "'><p>";
                 figure += m_data[i].name;
@@ -32,7 +32,8 @@ $("#mbti_select").on("change", function() {
         }
     }
 
-    $("button").removeClass("checked");
+    $("#choose_genre button").removeClass("checked");
+    $("#info_box").removeClass("slide");
 });
 
 //figure 선택시 (ajax로 불러온 요소에 적용하기 위해 document사용)
@@ -115,19 +116,19 @@ $(document).on("click", "figure", function() {
     }
 });
 
-//버튼 선택시 css 변경
-$("button").on("click", function() {
+//장르 선택시(버튼)  버튼 누르면 왜 또 사라져~~~~
+$("#choose_genre button").on("click", function() {
     //다른 장르 눌렀을 때 보던 인포박스 사라지게끔
     $("#info_box").removeClass("slide");
 
     $(this).toggleClass("checked");
-    if($("button").not($(this)).hasClass("checked")) {
-        $("button").not($(this)).removeClass("checked");
+    if($("#choose_genre button").not($(this)).hasClass("checked")) {
+        $("#choose_genre button").not($(this)).removeClass("checked");
     }
 
     $("figure").remove();
     for(i in m_data) {
-        if((m_data[i].mbti == $("#mbti_select option:checked").text()) && (m_data[i].genre == $(this).attr("id"))) {
+        if((m_data[i].mbti == $("#mbti_select option:checked").text()) && (m_data[i].genre == $(this).attr('class'))) {
             var figure = "<figure><img src='";
             figure += m_data[i].poster;
             figure += "'><p>";
@@ -152,3 +153,32 @@ $("button").on("click", function() {
     }
 });
 
+//장르 선택시(셀렉트)
+$("#small_select").on("change", function() {
+    $("figure").remove();
+    for(i in m_data) {
+        if((m_data[i].mbti == $("#mbti_select option:checked").text()) && (m_data[i].genre == $("#small_select option:checked").attr('class'))) {
+            var figure = "<figure><img src='";
+            figure += m_data[i].poster;
+            figure += "'><p>";
+            figure += m_data[i].name;
+            figure += "</p></figure>";
+            $("#result").append(figure);
+        }
+    }
+});
+
+//wish 등록
+$("#wish").on("click", function() {
+    for(i in m_data) {
+        if($(this).prev().text() == m_data[i].name) {
+            m_data[i].wish = true;
+            console.log(m_data[i]);
+        }
+    }
+});
+
+//다음페이지로 위시 추가한 영화목록 이동
+$("#page").on("click", function() {
+    localStorage.setItem("m_data", JSON.stringify(m_data));
+})

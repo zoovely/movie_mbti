@@ -65,7 +65,7 @@ content > #wrap2 > #choose_genre > button.checked {
     content > #wrap2 > #choose_genre > button {
         display: none;
     }
-    content > #wrap2 > #choose_genre > span.small {
+    content > #wrap2 > #choose_genre > .small {
         display: block;
         font-size: 30px;
         font-weight: bolder;
@@ -165,9 +165,9 @@ content #wrap > #info_box > #m_info {
     font-size: 17px;
 }
 
-@media screen and (max-width:320px) {
-    content > #wrap > #info_box > #wish {
-        position:static;
+@media screen and (max-width:500px) {
+    content #wrap > #info_box > #wish {
+        position: static;
         padding: 5px 10px 5px 10px;
         margin-bottom: 10px;
         background-color: white;

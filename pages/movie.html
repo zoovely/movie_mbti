@@ -12,24 +12,24 @@
 <body>
     <header>
         <nav id="gnb">
-            <a href="http://127.0.0.1:5500/index.html">
+            <a href="../index.html">
                 <img src="../img/logo.png" id="logo" alt="로고">
             </a>
-            <a href="#" id="toggle">
+            <a id="toggle">
                 <i id= "icon" class="fas fa-bars"></i>
             </a>
             <ul id="menu">
-                <li><a href="http://127.0.0.1:5500/pages/about.html">ABOUT</a></li>
-                <li><a href="http://127.0.0.1:5500/pages/movie.html">MOVIE</a></li>
-                <li><a href="#">WISH</a></li>
-                <li><a href="#">SEARCH</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="movie.html">MOVIE</a></li>
+                <li id="page"><a href="wish.html">WISH</a></li>
+                <li><a href="search.html">SEARCH</a></li>
             </ul>
         </nav>
     </header>
 
     <content>
         <div id="choose_mbti">
-            <span>내 MBTI는?</span>
+            <label for="mbti_select">내 MBTI는?</label>
             <select id="mbti_select">
                 <option>ENFP</option>
                 <option>ENTP</option>
@@ -51,32 +51,32 @@
         </div>
         <div id="wrap2">
             <div id="choose_genre">
-                <button id="drama">드라마</button>
-                <button id="crime">범죄</button>
-                <button id="comedy">코미디</button>
-                <button id="romance">로맨스</button>
-                <button id="animation">애니</button>
-                <button id="documentary">다큐</button>
-                <button id="horror">공포</button>
-                <button id="musical">뮤지컬</button>
-                <button id="action">액션</button>
-                <button id="thriller">스릴러</button>
-                <button id="fantasy">판타지</button>
-                <button id="sf">SF</button>
-                <span class="small">선호 장르</span>
-                <select class="small">
-                    <option selected>드라마</option>
-                    <option>범죄</option>
-                    <option>코미디</option>
-                    <option>로맨스</option>
-                    <option>애니</option>
-                    <option>다큐</option>
-                    <option>공포</option>
-                    <option>뮤지컬</option>
-                    <option>액션</option>
-                    <option>스릴러</option>
-                    <option>판타지</option>
-                    <option>SF</option>
+                <button class="drama">드라마</button>
+                <button class="crime">범죄</button>
+                <button class="comedy">코미디</button>
+                <button class="romance">로맨스</button>
+                <button class="animation">애니</button>
+                <button class="documentary">다큐</button>
+                <button class="horror">공포</button>
+                <button class="musical">뮤지컬</button>
+                <button class="action">액션</button>
+                <button class="thriller">스릴러</button>
+                <button class="fantasy">판타지</button>
+                <button class="sf">SF</button>
+                <label for="small_select" class="small">선호 장르</label>
+                <select id="small_select" class="small">
+                    <option class="drama">드라마</option>
+                    <option class="crime">범죄</option>
+                    <option class="comedy">코미디</option>
+                    <option class="romance">로맨스</option>
+                    <option class="animation">애니</option>
+                    <option class="documentary">다큐</option>
+                    <option class="horror">공포</option>
+                    <option class="musical">뮤지컬</option>
+                    <option class="action">액션</option>
+                    <option class="thriller">스릴러</option>
+                    <option class="fantasy">판타지</option>
+                    <option class="sf">SF</option>
                 </select>
             </div>
         </div>

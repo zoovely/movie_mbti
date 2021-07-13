@@ -32,7 +32,10 @@ header > #gnb > #menu li {
     font-size: 40px;
     font-weight: bold;
 }
-header > #gnb > a > #icon {
+header > #gnb > #toggle:hover {
+    cursor: pointer;
+}
+header > #gnb > #toggle > #icon {
     display: none;
 }
 
@@ -57,7 +60,7 @@ header > #gnb > a > #icon {
         margin: 0;
         padding: 30px 10px 30px 0;
     }
-    header > #gnb > a > #icon {
+    header > #gnb > #toggle > #icon {
         display: block;
         float: right;
         margin: 50px 50px;
@@ -73,7 +76,7 @@ header > #gnb > a > #icon {
     header > #gnb > a > #logo {
         width: 150px;
     }
-    header > #gnb > a > #icon {
+    header > #gnb > #toggle > #icon {
         font-size: 3em;
         margin: 40px;
     }
@@ -88,7 +91,7 @@ header > #gnb > a > #icon {
     header > #gnb > a > #logo {
         width: 100px;
     }
-    header > #gnb > a > #icon {
+    header > #gnb > #toggle > #icon {
         font-size: 2em;
         margin: 35px;
     }
