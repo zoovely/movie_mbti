@@ -117,6 +117,9 @@ $(document).on("click", "figure", function() {
 
 //버튼 선택시 css 변경
 $("button").on("click", function() {
+    //다른 장르 눌렀을 때 보던 인포박스 사라지게끔
+    $("#info_box").removeClass("slide");
+
     $(this).toggleClass("checked");
     if($("button").not($(this)).hasClass("checked")) {
         $("button").not($(this)).removeClass("checked");
