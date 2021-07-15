@@ -1,5 +1,10 @@
 //전역 변수, 함수
 var m_data;
+if(JSON.parse(localStorage.getItem("m_data")) == null) {
+    var w_data = null;
+} else {
+    w_data = Object.values(JSON.parse(localStorage.getItem("m_data")));
+}
 function insert_figure() {
     figure = "<figure><img alt='포스터' src='";
     figure += m_data[i].poster;
@@ -14,7 +19,12 @@ $.ajax({
     url:"../json/movie.json",
     dataType:"json",
     success: function(data) {
-        m_data = data;
+        if(w_data == null || JSON.stringify(data)===JSON.stringify(w_data)) {
+            m_data = data;
+        }
+        else {
+            m_data = w_data;
+        }
         for(i in m_data) {
             //처음 페이지 들어왔을 때 크기에 맞춰 영화 선택
             if($(window).outerWidth() < 861) {
@@ -144,6 +154,17 @@ $(document).on("click", "figure", function() {
             $("#info_box").removeClass("slide_m");
         }
     }
+    
+    //wish 버튼
+    for(i in m_data) {
+        if($(this).children('p').text() == m_data[i].name && m_data[i].wish == true) {
+            $("#wish").addClass("checked");
+            break;
+        }
+        else {
+            $("#wish").removeClass("checked");
+        }
+    }
 });
 
 //장르 선택시(버튼)
@@ -260,11 +281,14 @@ $(window).resize(function() {
 //wish 등록
 $("#wish").on("click", function() {
     for(i in m_data) {
-        if($(this).prev().text() == m_data[i].name) {
+        if($(this).prev().text() == m_data[i].name && m_data[i].wish == false) {
             m_data[i].wish = true;
-            console.log(m_data[i]);
+        }
+        else if($(this).prev().text() == m_data[i].name && m_data[i].wish == true) {
+            m_data[i].wish = false;
         }
     }
+    $(this).toggleClass("checked");
 });
 
 //다음페이지로 위시 추가한 영화목록 이동

@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/*검색창*/
+content > #search_bar {
+    text-align: center;
+    margin: 50px 70px 100px 0;
+}
+content > #search_bar > input {
+    width: 800px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 20px;
+    font-size: 30px;
+    color: black;
+    padding-left: 20px;
+    text-align: center;
+}
+content > #search_bar > a {
+    position: relative;
+    cursor: pointer;
+}
+content > #search_bar > a > #icon {
+    position: absolute;
+    font-size: 50px;
+}
+
+/*내용*/
+content > #title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 920px) {
+    content > #search_bar > input {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    content > #search_bar > input {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    content > #search_bar {
+        margin: 50px 0 100px 0;
+    }
+    content > #search_bar > input {
+        margin-right: 0;
+    }
+    content > #search_bar > a {
+        display: block;
+        margin: 10px 25px 0 0;
+    }
+    content > #search_bar > a > #icon {
+        font-size: 40px;
+    }
+    content > #title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    content > #search_bar > input {
+        width: 250px;
+    }
+    content > #search_bar > a > #icon {
+        font-size: 35px;
+    }
+    content > #title {
+        font-size: 25px;
+    }
+}
+
+/*추천 목록*/
+content > #wrap {
+    display: flex;
+    justify-content: center;
+}
+content > #wrap > #recommend {
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+content > #wrap > #recommend > figure {
+    margin: 0 25px 20px 25px;
+    text-align: center;
+}
+content > #wrap > #recommend > figure > img {
+    width: 200px;
+    height: 300px;
+}
+content > #wrap > #recommend > figure > img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+content > #wrap > #recommend > figure > p:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+content > #wrap > #no_result {
+    margin-top: 70px;
+    font-size: 40px;
+}
+/*영화 선택시 효과(토글용)*/
+.choose_poster {
+    border: 2px solid coral;
+}
+.choose_title {
+    text-decoration: underline;
+}
+
+/*영화 정보*/
+content #wrap2 {
+    display: flex;
+    justify-content: center;
+}
+content #wrap2 > #info_box {
+    display: none;
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    margin: 0 20px 20px 20px;
+    background-color: #505050;
+    border-radius: 20px;
+}
+/*info_box 나타나는 클래스*/
+content #wrap2 > #info_box.slide {
+    display: block;
+}content #wrap2 > #info_box.slide_m {
+    display: block;
+}
+content #wrap2 > #info_box > #m_title, #m_mbti {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+content #wrap2 > #info_box > #m_mbti {
+    margin-left: 10px;
+    padding: 0 5px 0 5px;
+    font-size: 20px;
+    background-color: white;
+    color: #505050;
+    border-radius: 20px;
+}
+content #wrap2 > #info_box > #wish {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+}
+content #wrap2 > #info_box > #wish:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+content #wrap2 > #info_box > #wish.checked {
+    background-color: black;
+    color: white;
+}
+content #wrap2 > #info_box > #m_info {
+    margin-bottom: 10px;
+    font-size: 17px;
+}

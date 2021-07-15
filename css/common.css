@@ -38,9 +38,25 @@ header > #gnb > #toggle:hover {
 header > #gnb > #toggle > #icon {
     display: none;
 }
+header > #gnb > #menu > #this_page > a {
+    color: black;
+    background-color: white;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+/*메뉴 밑으로 넘어가는 것 방지*/
+@media screen and (max-width: 1295px) {
+    header > #gnb > #menu li {
+        float: left;
+        margin: 60px 40px 70px 40px;
+        font-size: 40px;
+        font-weight: bold;
+}
+}
 
 /*메뉴 이름들이 영역을 넘어버리므로 햄버거 메뉴로 변경하는 분기점*/
-@media screen and (max-width: 1277px) {
+@media screen and (max-width: 1260px) {
     header > #gnb > #menu {
         position: absolute;
         right: 0;

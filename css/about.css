@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-/*헤더 선택 탭 색상 변경*/
-header > #gnb > #menu > li:first-child > a {
-    color: black;
-    background-color: white;
-    font-weight: bolder;
-    padding: 5px;
-}
-
 /*콘텐츠 제목*/
 content {
     position: absolute;

@@ -143,10 +143,3 @@ $(window).resize(function() {
         $("#wrap").insertAfter($("img.choose_poster").parent());
     }
 });
-
-//다음페이지로 위시 추가한 영화목록 이동
-$(".page").on("click", function() {
-    localStorage.setItem("m_data", JSON.stringify(w_data));
-})
-
-//movie-wish페이지 호환방법?

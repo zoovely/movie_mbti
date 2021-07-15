@@ -170,6 +170,10 @@ content #wrap > #info_box > #wish:hover {
     color: white;
     cursor: pointer;
 }
+content #wrap > #info_box > #wish.checked {
+    background-color: black;
+    color: white;
+}
 content #wrap > #info_box > #m_info {
     margin-bottom: 10px;
     font-size: 17px;

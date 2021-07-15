@@ -17,7 +17,7 @@ function sendLink() { // 카카오톡 공유하기
                 title: '지금 찾으러 가기',
                 link: {
                     mobileWebUrl: 'http://127.0.0.1:5500/index.html',
-                webUrl: 'http://127.0.0.1:5500/index.html'
+                    webUrl: 'http://127.0.0.1:5500/index.html'
                 },
             }
         ]
