@@ -29,6 +29,9 @@ content {
     left: 50%;
     margin: -100px 0 0 -340px;
 }
+content > div {
+    animation: up 1s ease-out;
+}
 
 /*어사이드*/
 aside {
@@ -61,5 +64,19 @@ aside {
     content {
         font-size: 0.9em;
         margin: -50px 0 0 -123px;
+    }
+}
+
+@keyframes up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

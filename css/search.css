@@ -91,6 +91,7 @@ content > #wrap > #recommend {
 content > #wrap > #recommend > figure {
     margin: 0 25px 20px 25px;
     text-align: center;
+    animation: up 0.3s linear;
 }
 content > #wrap > #recommend > figure > img {
     width: 200px;
@@ -172,4 +173,15 @@ content #wrap2 > #info_box > #wish.checked {
 content #wrap2 > #info_box > #m_info {
     margin-bottom: 10px;
     font-size: 17px;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

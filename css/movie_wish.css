@@ -5,7 +5,7 @@ content > #title {
     text-align: center;
     font-size: 40px;
     font-weight: bolder;
-    margin: 40px 0 40px 0;
+    margin: 40px 10px 40px 10px;
 }
 
 /*mbti선택*/
@@ -109,6 +109,7 @@ content > #wrap3 > #result {
 content > #wrap3 > #result > figure {
     margin: 0 25px 20px 25px;
     text-align: center;
+    animation: up 0.3s linear;
 }
 content > #wrap3 > #result > figure > img {
     width: 200px;
@@ -188,5 +189,16 @@ content #wrap > #info_box > #m_info {
         color: black;
         border: none;
         border-radius: 20px;
+    }
+}
+
+@keyframes up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

@@ -11,6 +11,7 @@ content {
 content > #title {
     text-align: center;
     margin-bottom: 40px;
+    animation: up_title 1s ease-out;
 }
 content > #title > h1 {
     font-size: 80px;
@@ -28,6 +29,7 @@ content > #title > h3 > u {
 content > #bottom {
     display: flex;
     justify-content: center;
+    animation: up_bottom 1.5s ease-out;
 }
 content > #bottom > #text {
     font-size: 30px;
@@ -163,5 +165,35 @@ content > #bottom > span {
     }
     content > #bottom > #first {
         display: none;
+    }
+}
+
+/*애니메이션*/
+@keyframes up_title {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes up_bottom {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
