@@ -1,11 +1,14 @@
 @charset "UTF-8";
 
 /*검색창*/
-content > #search_bar {
+section > h2 {
+    display: none;
+}
+section > #search_bar {
     text-align: center;
     margin: 50px 70px 100px 0;
 }
-content > #search_bar > input {
+section > #search_bar > input {
     width: 800px;
     height: 50px;
     border: none;
@@ -16,17 +19,17 @@ content > #search_bar > input {
     padding-left: 20px;
     text-align: center;
 }
-content > #search_bar > a {
+section > #search_bar > a {
     position: relative;
     cursor: pointer;
 }
-content > #search_bar > a > #icon {
+section > #search_bar > a > #icon2 {
     position: absolute;
     font-size: 50px;
 }
 
 /*내용*/
-content > #title {
+section > #title {
     text-align: center;
     font-size: 40px;
     font-weight: bolder;
@@ -34,78 +37,78 @@ content > #title {
 }
 
 @media screen and (max-width: 920px) {
-    content > #search_bar > input {
+    section > #search_bar > input {
         width: 500px;
     }
 }
 
 @media screen and (max-width: 630px) {
-    content > #search_bar > input {
+    section > #search_bar > input {
         width: 300px;
     }
 }
 
 @media screen and (max-width: 420px) {
-    content > #search_bar {
+    section > #search_bar {
         margin: 50px 0 100px 0;
     }
-    content > #search_bar > input {
+    section > #search_bar > input {
         margin-right: 0;
     }
-    content > #search_bar > a {
+    section > #search_bar > a {
         display: block;
         margin: 10px 25px 0 0;
     }
-    content > #search_bar > a > #icon {
+    section > #search_bar > a > #icon2 {
         font-size: 40px;
     }
-    content > #title {
+    section > #title {
         font-size: 30px;
     }
 }
 
 @media screen and (max-width: 330px) {
-    content > #search_bar > input {
+    section > #search_bar > input {
         width: 250px;
     }
-    content > #search_bar > a > #icon {
+    section > #search_bar > a > #icon2 {
         font-size: 35px;
     }
-    content > #title {
+    section > #title {
         font-size: 25px;
     }
 }
 
 /*추천 목록*/
-content > #wrap {
+section > #wrap {
     display: flex;
     justify-content: center;
 }
-content > #wrap > #recommend {
+section > #wrap > #recommend {
     width: 1100px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
 }
-content > #wrap > #recommend > figure {
+section > #wrap > #recommend > figure {
     margin: 0 25px 20px 25px;
     text-align: center;
     animation: up 0.3s linear;
 }
-content > #wrap > #recommend > figure > img {
+section > #wrap > #recommend > figure > img {
     width: 200px;
     height: 300px;
 }
-content > #wrap > #recommend > figure > img:hover {
+section > #wrap > #recommend > figure > img:hover {
     opacity: 0.5;
     cursor: pointer;
 }
-content > #wrap > #recommend > figure > p:hover {
+section > #wrap > #recommend > figure > p:hover {
     opacity: 0.5;
     cursor: pointer;
 }
-content > #wrap > #no_result {
+section > #wrap > #no_result {
     margin-top: 70px;
     font-size: 40px;
 }
@@ -118,11 +121,11 @@ content > #wrap > #no_result {
 }
 
 /*영화 정보*/
-content #wrap2 {
+section #wrap2 {
     display: flex;
     justify-content: center;
 }
-content #wrap2 > #info_box {
+section #wrap2 > #info_box {
     display: none;
     position: relative;
     width: 100%;
@@ -132,18 +135,18 @@ content #wrap2 > #info_box {
     border-radius: 20px;
 }
 /*info_box 나타나는 클래스*/
-content #wrap2 > #info_box.slide {
+section #wrap2 > #info_box.slide {
     display: block;
-}content #wrap2 > #info_box.slide_m {
+}section #wrap2 > #info_box.slide_m {
     display: block;
 }
-content #wrap2 > #info_box > #m_title, #m_mbti {
+section #wrap2 > #info_box > #m_title, #m_mbti {
     display: inline-block;
     font-size: 25px;
     font-weight: bolder;
     margin-bottom: 10px;
 }
-content #wrap2 > #info_box > #m_mbti {
+section #wrap2 > #info_box > #m_mbti {
     margin-left: 10px;
     padding: 0 5px 0 5px;
     font-size: 20px;
@@ -151,7 +154,7 @@ content #wrap2 > #info_box > #m_mbti {
     color: #505050;
     border-radius: 20px;
 }
-content #wrap2 > #info_box > #wish {
+section #wrap2 > #info_box > #wish {
     position: absolute;
     right: 20px;
     top: 15px;
@@ -161,16 +164,16 @@ content #wrap2 > #info_box > #wish {
     border: none;
     border-radius: 20px;
 }
-content #wrap2 > #info_box > #wish:hover {
+section #wrap2 > #info_box > #wish:hover {
     background-color: black;
     color: white;
     cursor: pointer;
 }
-content #wrap2 > #info_box > #wish.checked {
+section #wrap2 > #info_box > #wish.checked {
     background-color: black;
     color: white;
 }
-content #wrap2 > #info_box > #m_info {
+section #wrap2 > #info_box > #m_info {
     margin-bottom: 10px;
     font-size: 17px;
 }
