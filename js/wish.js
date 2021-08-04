@@ -15,7 +15,7 @@ $(document).ready(function () {
     if(w_data.length>0) {
         for(i in w_data) {
             if(w_data[i].wish == true) {
-                $("#result").text(" ");
+                $("#result>p").css("display","none");
                 insert_figure();
             }
         }
