@@ -16,7 +16,7 @@ function insert_figure() {
 
 //json 파일 불러오기
 $.ajax({
-    url:"../json/movie.json",
+    url:"../js/movie.json",
     dataType:"json",
     success: function(data) {
         if(w_data == null || JSON.stringify(data)===JSON.stringify(w_data)) {

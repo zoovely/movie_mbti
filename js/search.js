@@ -3,7 +3,7 @@ var w_data=[];
 //중복 없이 난수 네개 뽑기
 var random_num = [];
 for(i=0; i<4; i++) {
-    var a = Math.floor(Math.random()*16);
+    var a = Math.floor(Math.random()*128);
     if(random_num.indexOf(a)===-1) {
         random_num.push(a);
     }
@@ -12,7 +12,7 @@ for(i=0; i<4; i++) {
     }
 }
 
-//movie 페이지에서 영화 목록 받아오기
+//영화 목록 받아오기
 $(document).ready(function () {
     w_data = Object.values(JSON.parse(localStorage.getItem("m_data")));
     console.log(w_data);

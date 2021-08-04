@@ -1,21 +1,24 @@
 @charset "UTF-8";
 
 /*wish 페이지 제목*/
-content > #title {
+section > #title {
     text-align: center;
     font-size: 40px;
     font-weight: bolder;
-    margin: 40px 0 40px 0;
+    margin: 40px 10px 40px 10px;
+}
+section > h2 {
+    display: none;
 }
 
 /*mbti선택*/
-content > #choose_mbti {
+section > #choose_mbti {
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
     margin-bottom: 20px;
 }
-content > #choose_mbti > select {
+section > #choose_mbti > select {
     width: 120px;
     height: 30px;
     border-radius: 20px;
@@ -24,25 +27,25 @@ content > #choose_mbti > select {
     font-weight: bolder;
     text-align-last: center;
 }
-content > #choose_mbti > select > option {
+section > #choose_mbti > select > option {
     color: black;
 }
 
 /*장르선택*/
-content > #wrap2 {
+section > #wrap2 {
     display: flex;
     justify-content: center;
 }
-content > #wrap2 > #choose_genre {
+section > #wrap2 > #choose_genre {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 930px;
 }
-content > #wrap2 > #choose_genre > .small {
+section > #wrap2 > #choose_genre > .small {
     display: none;
 }
-content > #wrap2 > #choose_genre > button {
+section > #wrap2 > #choose_genre > button {
     width: 120px;
     height: 30px;
     margin: 5px 10px 5px 10px;
@@ -53,33 +56,33 @@ content > #wrap2 > #choose_genre > button {
     border: none;
     border-radius: 20px;
 }
-content > #wrap2 > #choose_genre > button:hover {
+section > #wrap2 > #choose_genre > button:hover {
     background-color: #505050;
     color: white;
     border: 2px solid white;
     cursor: pointer;
 }
 /*버튼 선택 효과*/
-content > #wrap2 > #choose_genre > button.checked {
+section > #wrap2 > #choose_genre > button.checked {
     background-color: #505050;
     color: white;
     border: 2px solid white;
 }
 
 @media screen and (max-width:860px) {
-    content > #wrap2 > #choose_genre {
+    section > #wrap2 > #choose_genre {
         margin-bottom: 20px;
     }
-    content > #wrap2 > #choose_genre > button {
+    section > #wrap2 > #choose_genre > button {
         display: none;
     }
-    content > #wrap2 > #choose_genre > .small {
+    section > #wrap2 > #choose_genre > .small {
         display: block;
         font-size: 30px;
         font-weight: bolder;
         margin-right: 10px;
     }
-    content > #wrap2 > #choose_genre > select.small {
+    section > #wrap2 > #choose_genre > select.small {
         display: block;
         width: 120px;
         height: 30px;
@@ -89,36 +92,37 @@ content > #wrap2 > #choose_genre > button.checked {
         font-weight: bolder;
         text-align-last: center;
     }
-    content > #wrap2 > #choose_genre > select.small > option {
+    section > #wrap2 > #choose_genre > select.small > option {
         color: black;
     }
 }
 
 /*영화 목록*/
-content > #wrap3 {
+section > #wrap3 {
     display: flex;
     justify-content: center;
 }
-content > #wrap3 > #result {
+section > #wrap3 > #result {
     width: 1100px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
 }
-content > #wrap3 > #result > figure {
+section > #wrap3 > #result > figure {
     margin: 0 25px 20px 25px;
     text-align: center;
+    animation: up 0.3s linear;
 }
-content > #wrap3 > #result > figure > img {
+section > #wrap3 > #result > figure > img {
     width: 200px;
     height: 300px;
 }
-content > #wrap3 > #result > figure > img:hover {
+section > #wrap3 > #result > figure > img:hover {
     opacity: 0.5;
     cursor: pointer;
 }
-content > #wrap3 > #result > figure > p:hover {
+section > #wrap3 > #result > figure > p:hover {
     opacity: 0.5;
     cursor: pointer;
 }
@@ -131,11 +135,11 @@ content > #wrap3 > #result > figure > p:hover {
 }
 
 /*영화 정보*/
-content #wrap {
+section #wrap {
     display: flex;
     justify-content: center;
 }
-content #wrap > #info_box {
+section #wrap > #info_box {
     display: none;
     position: relative;
     width: 100%;
@@ -145,17 +149,17 @@ content #wrap > #info_box {
     border-radius: 20px;
 }
 /*info_box 나타나는 클래스*/
-content #wrap > #info_box.slide {
+section #wrap > #info_box.slide {
     display: block;
-}content #wrap > #info_box.slide_m {
+}section #wrap > #info_box.slide_m {
     display: block;
 }
-content #wrap > #info_box > #m_title {
+section #wrap > #info_box > #m_title {
     font-size: 25px;
     font-weight: bolder;
     margin-bottom: 10px;
 }
-content #wrap > #info_box > #wish {
+section #wrap > #info_box > #wish {
     position: absolute;
     right: 20px;
     top: 15px;
@@ -165,22 +169,22 @@ content #wrap > #info_box > #wish {
     border: none;
     border-radius: 20px;
 }
-content #wrap > #info_box > #wish:hover {
+section #wrap > #info_box > #wish:hover {
     background-color: black;
     color: white;
     cursor: pointer;
 }
-content #wrap > #info_box > #wish.checked {
+section #wrap > #info_box > #wish.checked {
     background-color: black;
     color: white;
 }
-content #wrap > #info_box > #m_info {
+section #wrap > #info_box > #m_info {
     margin-bottom: 10px;
     font-size: 17px;
 }
 
 @media screen and (max-width:500px) {
-    content #wrap > #info_box > #wish {
+    section #wrap > #info_box > #wish {
         position: static;
         padding: 5px 10px 5px 10px;
         margin-bottom: 10px;
@@ -188,5 +192,16 @@ content #wrap > #info_box > #m_info {
         color: black;
         border: none;
         border-radius: 20px;
+    }
+}
+
+@keyframes up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

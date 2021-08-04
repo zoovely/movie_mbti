@@ -8,13 +8,16 @@ function insert_figure() {
     $("#result").append(figure);
 };
 
-//movie 페이지에서 영화 목록 받아오기
+//영화 목록 받아오기
 $(document).ready(function () {
     w_data = Object.values(JSON.parse(localStorage.getItem("m_data")));
     console.log(w_data);
-    for(i in w_data) {
-        if(w_data[i].wish == true) {
-            insert_figure();
+    if(w_data.length>0) {
+        for(i in w_data) {
+            if(w_data[i].wish == true) {
+                $("#result").text(" ");
+                insert_figure();
+            }
         }
     }
 });
