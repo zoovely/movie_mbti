@@ -8,16 +8,16 @@ function sendLink() { // 카카오톡 공유하기
             description: '내 MBTI로 나만의 무비티아이를 찾아보세요!',
             imageUrl: 'https://cdn.pixabay.com/photo/2017/08/11/00/52/m-ms-2629323_960_720.png',
             link: {
-                mobileWebUrl: 'http://127.0.0.1:5500/index.html',
-                webUrl: 'http://127.0.0.1:5500/index.html'
+                mobileWebUrl: 'https://zoovely.github.io/movie_mbti/',
+                webUrl: 'https://zoovely.github.io/movie_mbti/'
             },
         },
         buttons: [
             {
                 title: '지금 찾으러 가기',
                 link: {
-                    mobileWebUrl: 'http://127.0.0.1:5500/index.html',
-                    webUrl: 'http://127.0.0.1:5500/index.html'
+                    mobileWebUrl: 'https://zoovely.github.io/movie_mbti/',
+                    webUrl: 'https://zoovely.github.io/movie_mbti/'
                 },
             }
         ]
