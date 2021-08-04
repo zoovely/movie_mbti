@@ -10,7 +10,7 @@ section {
 }
 section > #title {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     animation: up_title 1s ease-out;
 }
 section > #title > h1 {
@@ -18,7 +18,7 @@ section > #title > h1 {
     font-weight: bold;
 }
 section > #title > h3 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: normal;
 }
 section > #title > h3 > u {
