@@ -7,7 +7,7 @@ _[🎬 DEMO](https://zoovely.github.io/movie_mbti/)_
 ### 1. Movie MBTI
 웹사이트의 메인 화면입니다. 환영 문구와 함께 배경에는 유튜브 영상 5개 중 한 개가 자동 재생됩니다. 이는 jQuery 플러그인을 사용하였습니다. PC 화면에서는 오른쪽 중앙의 버튼을 이용하거나 왼쪽 상단의 내비게이션으로 페이지 간 이동이 가능합니다. 또한 어느 페이지에서든 로고를 클릭하면 메인 페이지로 돌아오게 됩니다. 모바일 화면에서는 오른쪽 상단 버튼 클릭 시 내비게이션이 나타납니다.
 
-_[🧑‍💻 사용한 jQuery 플러그인](https://www.seanmccambridge.com/tubular/)_
+_[💻 사용한 jQuery 플러그인](https://www.seanmccambridge.com/tubular/)_
 <div align="center">
   <img width="1438" alt="스크린샷 2021-07-31 오후 11 41 03" src="https://user-images.githubusercontent.com/84768491/127743483-6d35c99a-0d5b-46b2-92da-3f290b07d3e2.png">
   <img width="488" alt="스크린샷 2021-07-31 오후 11 42 16" src="https://user-images.githubusercontent.com/84768491/127743479-de529286-6fbe-4e23-9c6a-2f3afdc9df29.png"> 
@@ -16,7 +16,7 @@ _[🧑‍💻 사용한 jQuery 플러그인](https://www.seanmccambridge.com/tub
 ### 2. Movie MBTI : ABOUT
 사이트 안내 페이지로, 각 페이지의 기능을 설명합니다. PC 화면에서는 오른쪽 중앙의 버튼을 이용하여 MOVIE 페이지로 이동 할 수 있습니다. 페이지 하단의 '친구한테 사이트 공유하기' 버튼을 클릭하면 카카오톡 공유하기 기능으로 메시지를 전송할 수 있습니다. 이는 카카오 오픈 API를 사용하였습니다.
 
-_[🧑‍💻 카카오 오픈 API](https://developers.kakao.com/product/message)_
+_[💻 카카오 오픈 API](https://developers.kakao.com/product/message)_
 <div align="center">
   <img width="1438" alt="스크린샷 2021-07-31 오후 11 41 03" src="https://user-images.githubusercontent.com/84768491/127807716-f6404562-f641-43d3-9ba5-11098a29e9f2.PNG">
   <img width="488" alt="스크린샷 2021-07-31 오후 11 42 16" src="https://user-images.githubusercontent.com/84768491/127807746-7271ba22-8d31-4628-97ea-31e61d4da9e0.PNG">
