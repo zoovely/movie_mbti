@@ -82,7 +82,7 @@ header > #gnb > #menu > #this_page > a {
         margin: 50px 50px;
         font-size: 4em;
     }
-    body {
+    html, body {
         max-width: 100%;
         overflow-x: hidden;
     } /*스크롤 생김 방지*/

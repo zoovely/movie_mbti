@@ -1,24 +1,26 @@
 @charset "UTF-8";
 
+body {
+    overflow-y: hidden;
+}
+
 /*섹션 제목*/
 section {
-    position: absolute;
-    top: 25%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 section > #title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     animation: up_title 1s ease-out;
 }
 section > #title > h1 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
 }
 section > #title > h3 {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: normal;
 }
 section > #title > h3 > u {
@@ -55,7 +57,7 @@ section > #bottom > span {
 /*푸터*/
 #share {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding: 10px 0 10px 0;
     background-color: black;
@@ -96,7 +98,7 @@ section > #bottom > span {
 }
 @media screen and (max-width: 900px) {
     section {
-        top: 30%;
+        margin-top: 40px;
     }
     section > #title > h1 {
         font-size: 60px;
@@ -128,6 +130,7 @@ section > #bottom > span {
 }
 @media screen and (max-width: 600px) {
     section {
+        margin-top: 0;
         top: 20%;
         padding: 10px;
     }
